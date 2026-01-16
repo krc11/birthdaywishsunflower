@@ -1,0 +1,346 @@
+:root {
+    --sunflower-yellow: #FFC107;
+    --golden-orange: #FF9800;
+    --warm-brown: #5D4037;
+    --leafy-green: #4CAF50;
+    --soft-white: #FFF8E1;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--soft-white);
+    color: var(--warm-brown);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Fallback */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    animation: fadeInUp 1s ease-out;
+    max-width: 90%;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-indicator {
+    margin-top: 2rem;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--golden-orange);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: var(--leafy-green);
+    margin: 5px auto 0;
+    border-radius: 2px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.photo-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    /* Smoother corners */
+    box-shadow: var(--shadow);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.photo-frame {
+    width: 100%;
+    aspect-ratio: 1;
+    /* Square placeholder */
+    overflow: hidden;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-note {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Message Section */
+.message-section {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.message-card {
+    background: var(--glass-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    text-align: center;
+    border: 2px solid var(--sunflower-yellow);
+    position: relative;
+    overflow: hidden;
+}
+
+.message-card::before {
+    content: '🌻';
+    font-size: 10rem;
+    position: absolute;
+    top: -3rem;
+    right: -3rem;
+    opacity: 0.1;
+    transform: rotate(30deg);
+}
+
+.message-card::after {
+    content: '🌻';
+    font-size: 8rem;
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    opacity: 0.1;
+    transform: rotate(-20deg);
+}
+
+.message-content {
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.message-content p {
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--warm-brown);
+    margin-bottom: 0.5rem !important;
+}
+
+.name-placeholder {
+    font-weight: bold;
+    color: var(--leafy-green);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--golden-orange);
+    color: white;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* Music Button */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--golden-orange);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music-btn:hover {
+    transform: scale(1.1);
+    background: var(--sunflower-yellow);
+}
+
+.music-btn.playing {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(255, 152, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .photo-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .message-card {
+        padding: 2rem 1.5rem;
+    }
+}

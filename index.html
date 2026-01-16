@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 21st Birthday!</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="confetti-container"></div>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="music-btn" title="Play Music">🎵</button>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">Happy 21st Birthday!</h1>
+            <p class="subtitle">Wishing you a day as sunny as a sunflower field &#127803;</p>
+            <div class="scroll-indicator">
+                <span>&#8595;</span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section">
+            <h2 class="section-title">Memories</h2>
+            <div class="gallery-grid">
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <img src="p1.png" alt="Memory 1">
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <img src="p2.png" alt="Memory 2">
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <div class="photo-frame">
+                        <img src="p1.png" alt="Memory 3">
+                    </div>
+                </div>
+            </div>
+            <p class="gallery-note">(Add your photos here!)</p>
+        </section>
+
+        <section class="message-section">
+            <div class="message-card">
+                <h2 class="section-title">A Special Note</h2>
+                <div class="message-content">
+                    <p>Happy 21st Birthday! &#10024;</p>
+                    <p>Here's to a year filled with as much joy, warmth, and brightness as you bring into the world. May
+                        your days be golden and your smiles be endless. Keep shining like a sunflower!</p>
+                    <p class="signature">With love,</p>
+                    <p class="name-placeholder">[Your Name]</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with sunshine & love &#127803;</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
