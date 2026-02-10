@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites of You - Happy Birthday</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="confetti-container"></div>
+
+    <audio id="bg-music" loop autoplay>
+        <source src="music2.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" class="music-btn" title="Play Music">🎵</button>
+
+    <!-- Optional: Reuse the music button or keep it only on home. 
+         Let's keep it simple and just have the gallery for now, 
+         but audio plays across pages usually if SPA, here it will restart. 
+         We'll leave audio control to the main page or duplicate it if requested. 
+         For now, simple page. -->
+
+    <header class="hero-section" style="height: 60vh;">
+        <div class="hero-content">
+            <h1 class="main-title">Favourites of You 🌻</h1>
+            <p class="subtitle">Aja Dekh </p>
+            <a href="index.html" class="theme-btn">Start Over</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main class="container">
+        <section class="gallery-section">
+            <h2 class="section-title">Precious Memories</h2>
+            <div class="gallery-grid">
+                <!-- Using existing images as placeholders -->
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k002.jpg" alt="Favourite 1">
+                    </div>
+                    <figcaption class="photo-caption">Happy birthday</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k001.png" alt="Favourite 2">
+                    </div>
+                    <figcaption class="photo-caption">Bitch🌻</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k003.jpg" alt="Favourite 3">
+                    </div>
+                    <figcaption class="photo-caption">❤️</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k004.jpg" alt="Favourite 4">
+                    </div>
+                    <figcaption class="photo-caption">Mu bnana to bachpan se ata hai</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="p2.jpg" alt="Favourite 5">
+                    </div>
+                    <figcaption class="photo-caption">or drama karna bhi</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k006.jpg" alt="Favourite 6">
+                    </div>
+                    <figcaption class="photo-caption">BUT aise mu hamesha bnati rahio</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k007.jpg" alt="Favourite 7">
+                    </div>
+                    <figcaption class="photo-caption">🤌</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="p1.jpg" alt="Favourite 8">
+                    </div>
+                    <figcaption class="photo-caption">Baddie 💅 </figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k009.jpg" alt="Favourite 9">
+                    </div>
+                    <figcaption class="photo-caption">to Bevdi 🤪</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k010.jpg" alt="Favourite 10">
+                    </div>
+                    <figcaption class="photo-caption">but always a Princess 👑</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k011.jpg" alt="Favourite 11">
+                    </div>
+                    <figcaption class="photo-caption">❤️👑❤️</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k012.jpg" alt="Favourite 12">
+                    </div>
+                    <figcaption class="photo-caption">Beauty at its peak 🦚</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k013.jpg" alt="Favourite 13">
+                    </div>
+                    <figcaption class="photo-caption">First time you ever sent me a pic ❤️</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k014.jpg" alt="Favourite 14">
+                    </div>
+                    <figcaption class="photo-caption">GOLU</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k015.jpg" alt="Favourite 15">
+                    </div>
+                    <figcaption class="photo-caption">Molu</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k016.jpg" alt="Favourite 16">
+                    </div>
+                    <figcaption class="photo-caption">Peace ❤️</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k017.jpg" alt="Favourite 17">
+                    </div>
+                    <figcaption class="photo-caption">Jalpari 🧜‍♀️</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k018.jpg" alt="Favourite 18">
+                    </div>
+                    <figcaption class="photo-caption">Motuu 🍩</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k019.jpg" alt="Favourite 19">
+                    </div>
+                    <figcaption class="photo-caption">speechless bhai 🤌🤌</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k020.jpg" alt="Favourite 20">
+                    </div>
+                    <figcaption class="photo-caption">🌻</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <img src="k021.jpg" alt="Favourite 21">
+                    </div>
+                    <figcaption class="photo-caption">bas ab ja enjoy your day ❤️</figcaption>
+                </figure>
+
+
+                <figure class="photo-card">
+                    <div class="photo-frame">
+                        <!-- Placeholder for more user images -->
+                        <div
+                            style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#eee; color:#aaa; font-size:2rem;">
+                            +</div>
+                    </div>
+                    <figcaption class="photo-caption">More memories to come...</figcaption>
+                </figure>
+            </div>
+            <p class="gallery-note">har frame me pyari lagti hai✨</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>TATA golu always miss you ❤️</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
